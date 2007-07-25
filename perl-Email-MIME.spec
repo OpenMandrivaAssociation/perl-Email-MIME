@@ -1,7 +1,7 @@
 %define module	    Email-MIME
 %define name	    perl-%{module}
-%define version     1.85.9
-%define up_version  1.859
+%define version     1.86.0
+%define up_version  1.860
 %define release     %mkrel 1
 
 Name:		%{name}
