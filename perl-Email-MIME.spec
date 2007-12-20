@@ -21,6 +21,7 @@ BuildRequires:	perl(Email::Simple)
 BuildRequires:	perl(Email::MIME::ContentType)
 BuildRequires:	perl(Email::MIME::Encodings)
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is an extension of the Email::Simple module, to handle MIME encoded
