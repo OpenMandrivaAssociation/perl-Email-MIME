@@ -1,7 +1,7 @@
 %define module	    Email-MIME
 %define name	    perl-%{module}
-%define version     1.86.1
 %define up_version  1.861
+%define version     %perl_convert_version %{up_version}
 %define release     %mkrel 3
 
 Name:		%{name}
@@ -13,9 +13,6 @@ Group:		Development/Perl
 URL:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/Email/%{module}-%{up_version}.tar.gz
 Requires:       perl(Email::Simple)
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
 BuildRequires:	perl(MIME::Types)
 BuildRequires:	perl(Email::Simple)
 BuildRequires:	perl(Email::MIME::ContentType)
