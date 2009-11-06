@@ -11,9 +11,11 @@ Group:		Development/Perl
 URL:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Email/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires:	perl(Email::MessageID)
 BuildRequires:	perl(Email::MIME::ContentType)
 BuildRequires:	perl(Email::MIME::Encodings)
 BuildRequires:	perl(Email::Simple)
+BuildRequires:	perl(Email::Simple::Creator)
 BuildRequires:	perl(MIME::Types)
 
 BuildArch:	noarch
