@@ -1,24 +1,25 @@
-%define module	    Email-MIME
-%define name	    perl-%{module}
-%define up_version  1.863
-%define version     %perl_convert_version %{up_version}
-%define release     %mkrel 2
+%define upstream_name	 Email-MIME
+%define upstream_version 1.901
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Easy MIME message parsing
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Email/%{module}-%{up_version}.tar.gz
-Requires:       perl(Email::Simple)
-BuildRequires:	perl(MIME::Types)
-BuildRequires:	perl(Email::Simple)
+URL:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Email/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl(Email::MIME::ContentType)
 BuildRequires:	perl(Email::MIME::Encodings)
+BuildRequires:	perl(Email::Simple)
+BuildRequires:	perl(MIME::Types)
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
+Requires:       perl(Email::Simple)
 
 %description
 This is an extension of the Email::Simple module, to handle MIME encoded
@@ -27,7 +28,7 @@ parts, and allows you access to various parts of the message. Headers are
 decoded from MIME encoding.
 
 %prep
-%setup -q -n %{module}-%{up_version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -48,5 +49,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/Email
 %{_mandir}/*/*
-
-
