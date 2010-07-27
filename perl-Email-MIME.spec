@@ -22,6 +22,8 @@ BuildRequires:	perl(MIME::Types)
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
+Obsoletes: perl-Email-MIME-Creator <= 1.456.0
+Provides:  perl-Email-MIME-Creator  = 1.456.0
 Obsoletes: perl-Email-MIME-Modifier <= 1.444.0
 Provides:  perl-Email-MIME-Modifier  = 1.444.0
 
