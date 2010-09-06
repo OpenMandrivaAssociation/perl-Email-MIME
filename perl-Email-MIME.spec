@@ -1,9 +1,9 @@
 %define upstream_name	 Email-MIME
-%define upstream_version 1.903
+%define upstream_version 1.904
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:	Easy MIME message parsing
 License:	GPL+ or Artistic
