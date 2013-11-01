@@ -1,17 +1,18 @@
 %define upstream_name	 Email-MIME
-%define upstream_version 1.908
+%define upstream_version 1.924
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	Easy MIME message parsing
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Email/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Email/Email-MIME-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
+BuildRequires: perl(Capture::Tiny)
 BuildRequires:	perl(Email::Date::Format)
 BuildRequires:	perl(Email::MessageID)
 BuildRequires:	perl(Email::MIME::ContentType)
@@ -153,4 +154,5 @@ make test
 
 * Mon Mar 06 2006 Guillaume Rousse <guillomovitch@mandriva.org> 1.82-1mdk
 - first mdk release
+
 
