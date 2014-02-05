@@ -1,5 +1,5 @@
 %define upstream_name	 Email-MIME
-%define upstream_version 1.924
+%define upstream_version 1.926
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -154,5 +154,6 @@ make test
 
 * Mon Mar 06 2006 Guillaume Rousse <guillomovitch@mandriva.org> 1.82-1mdk
 - first mdk release
+
 
 
