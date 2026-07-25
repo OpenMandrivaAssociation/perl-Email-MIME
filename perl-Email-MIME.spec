@@ -1,15 +1,15 @@
 %define upstream_name	 Email-MIME
-%define upstream_version 1.926
+%define upstream_version 1.954
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Easy MIME message parsing
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Email/Email-MIME-%{upstream_version}.tar.gz
+URL:		https://github.com/rjbs/Email-MIME
+Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-MIME-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
