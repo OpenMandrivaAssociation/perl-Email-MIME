@@ -1,15 +1,13 @@
 %define upstream_name	 Email-MIME
-%define upstream_version 1.954
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.954
+Release:	2
 
 Summary:	Easy MIME message parsing
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://github.com/rjbs/Email-MIME
-Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-MIME-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-MIME-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -38,7 +36,7 @@ parts, and allows you access to various parts of the message. Headers are
 decoded from MIME encoding.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%setup -q -n %{upstream_name}-%{version} 
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -93,7 +91,7 @@ make test
 
 * Thu May 21 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.863.0-2mdv2010.0
 + Revision: 378258
-- use new %%perl_convert_version macro
+- use new %1.954
 
 * Mon May 11 2009 Jérôme Quelin <jquelin@mandriva.org> 1.863-1mdv2010.0
 + Revision: 374423
